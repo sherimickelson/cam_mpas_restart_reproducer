@@ -9,9 +9,16 @@ this example works with the intel (ifort) and gnu compiler.  it fails with the n
 a successful run prints out 'latCell'.
 
 Here's the stack in the original code
+
 https://github.com/EarthWorksOrg/CAM/blob/ew-main/src/dynamics/mpas/driver/cam_mpas_subdriver.F90#L48-L57
+
 https://github.com/EarthWorksOrg/CAM/blob/ew-main/src/dynamics/mpas/driver/cam_mpas_subdriver.F90#L1742-L1751
+
 https://github.com/EarthWorksOrg/CAM/blob/ew-main/src/dynamics/mpas/restart_dynamics.F90#L80
+
 https://github.com/EarthWorksOrg/CAM/blob/ew-main/src/utils/cam_abortutils.F90#L4
+
 https://github.com/ESCOMP/CESM_share/blob/main/src/shr_sys_mod.F90#L24
+
 https://github.com/ESCOMP/CESM_share/blob/main/src/shr_abort_mod.F90#L38-L43
+
