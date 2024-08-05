@@ -52,8 +52,6 @@ subroutine cam_mpas_update_halo(fieldName, endrun)
        ! Local variables
        character(len=*), parameter :: subname = 'cam_mpas_subdriver::cam_mpas_update_halo'
 
-       character(len=StrKIND) :: errString
-
        write(*,*) fieldName
 end subroutine cam_mpas_update_halo
 

@@ -10,7 +10,7 @@ module shr_abort_mod
   use, intrinsic :: iso_fortran_env, only: output_unit, error_unit
 
   use shr_kind_mod, only : shr_kind_in, shr_kind_cx
-  use shr_mpi_mod , only : shr_mpi_initialized, shr_mpi_abort
+!  use shr_mpi_mod , only : shr_mpi_initialized, shr_mpi_abort
   use shr_log_mod , only : s_logunit => shr_log_Unit
 
 #ifdef CPRNAG
@@ -60,15 +60,15 @@ contains
 
     call shr_abort_backtrace()
 
-    call shr_mpi_initialized(flag)
-
-    if (flag) then
-       if (present(rc)) then
-          call shr_mpi_abort(trim(local_string),rc)
-       else
-          call shr_mpi_abort(trim(local_string))
-       endif
-    endif
+!    call shr_mpi_initialized(flag)
+!
+!    if (flag) then
+!       if (present(rc)) then
+!          call shr_mpi_abort(trim(local_string),rc)
+!       else
+!          call shr_mpi_abort(trim(local_string))
+!       endif
+!    endif
 
     ! A compiler's abort method may print a backtrace or do other nice
     ! things, but in fact we can rarely leverage this, because MPI_Abort
