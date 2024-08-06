@@ -1,11 +1,14 @@
 # cam_mpas_restart_reproducer
 
-This code was created to reproduce a problem we're seeing when we run a cam-mpas restart run using the nvhpc compiler.
-It is a stand alone code and needs nothing but the compler (no input files needed)
+This code was created to reproduce a problem we're seeing when we run a cam-mpas restart run using the nvhpc compiler.  The problem seems to be coming from different type declarations of 'endrun'.
 
-make the code using the makefile and switching comilers at the top
+This is a stand alone code and needs nothing but a fortran compiler (no input files needed)
 
-this example works with the intel (ifort) and gnu compiler.  it fails with the nvphpc comiler with a seg fault.
+make the code using the makefile and switching compilers at the top of that file.  
+
+To build, type 'make', to run, type './program'.
+
+this example works with the intel (ifort) and gnu compilers.  it fails with the nvhpc compiler with a seg fault.
 a successful run prints out 'latCell'.
 
 Here's the stack in the original code
